@@ -1,5 +1,5 @@
 <template>
-    <div id="top-search-bar" v-on:keyup.enter="displayAllBooks">
+    <div id="top-search-bar">
           <v-text-field
             class="mt-5 appBar"
             label="Search"

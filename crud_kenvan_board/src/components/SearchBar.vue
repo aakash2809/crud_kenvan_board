@@ -8,6 +8,7 @@
             dense
             v-model="search"
           ></v-text-field>
+          
         </div>
 </template>
 

@@ -4,11 +4,6 @@
          <div class="text-center">
    <PopUp />
    <Note/>
-   <template>
-                      <v-btn icon v-bind="attrs" v-on="on">
-                        <v-icon>mdi-bell-plus</v-icon>
-                      </v-btn>
-                    </template>
     </div>
           
         </div>
@@ -27,12 +22,11 @@ export default {
   },
   methods: {
      allTask() {
-      (this.showNoteCard = true), (this.sideNavAction = "Notes");
-      this.isActivate = true;
+   
     },
   },
    mounted() {
-    EventBus.$on("sideNavActionForNotes", this.allTask);
+   this.allTask()
   },
 }
 </script>

@@ -10,6 +10,7 @@
           dark
           v-bind="attrs"
           v-on="on"
+          @click.prevent="openPopup"
         >
           Add Task
         </v-btn>
@@ -29,7 +30,6 @@
           <v-btn
             color="primary"
             text
-            @click="dialog = false"
           >
             Add 
           </v-btn>
@@ -49,5 +49,11 @@
         dialog: false,
       }
     },
+
+    methods: {
+        openPopup() {
+            this.dialog = true
+        }
+    }
   }
 </script>

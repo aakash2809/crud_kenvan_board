@@ -24,14 +24,8 @@
             <v-btn id="close-card" text v-on:click="takeNote"> close </v-btn>
           </v-footer>
         </div>
-        <div v-if="!active">
+        <div >
           <v-toolbar flat>
-            <v-text-field
-              class="note-title pt-8"
-              flat
-              solo
-              label="Take a Note..."
-            ></v-text-field>
             <v-spacer></v-spacer>
           </v-toolbar>
         </div>
@@ -46,7 +40,7 @@ export default {
   name: "Note",
   data: () => ({
     noteTitle: "",
-    active: false,
+    active: true,
   }),
 };
 </script>

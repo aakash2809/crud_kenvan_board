@@ -5,7 +5,6 @@
         class="my-3 note-card"
         id="noteCard"
         elevation="9"
-        v-click-outside="collapseCard"
         @click="active = true"
       >
         <div v-if="active">
@@ -34,10 +33,6 @@
               label="Take a Note..."
             ></v-text-field>
             <v-spacer></v-spacer>
-            
-
-          
-            
           </v-toolbar>
         </div>
       </v-card>
@@ -46,13 +41,11 @@
 </template>
 
 <script>
-//import userServices from "../services/user";
-//import { mapGetters, mapActions } from "vuex";
+
 export default {
   name: "Note",
   data: () => ({
     noteTitle: "",
-    description: "",
     active: false,
   }),
 };

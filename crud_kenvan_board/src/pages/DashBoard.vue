@@ -9,7 +9,7 @@
     >
       Add Task
     </v-btn>
-   
+   <PopUp />
     </div>
           
         </div>
@@ -17,10 +17,12 @@
 
 <script>
 import SearchBar from '../components/SearchBar.vue'
+import PopUp from '../components/TaskPopup.vue'
 export default {
   name: 'dashboard',
   components: {
     SearchBar,
+    PopUp
   },
 }
 </script>

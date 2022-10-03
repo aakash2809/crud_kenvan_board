@@ -46,7 +46,7 @@
      name: "Note",
     data () {
       return {
-        dialog: true,
+        dialog: false,
       }
     },
   }

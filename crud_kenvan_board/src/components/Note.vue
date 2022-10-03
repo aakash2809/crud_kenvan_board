@@ -1,30 +1,31 @@
 <template>
-    <div>
- <v-card
-    class="mx-auto"
-    max-width="344"
-  >
-    <v-spacer></v-spacer>
+  <div>
+    <v-card class="mx-auto" max-width="344">
+      <v-spacer></v-spacer>
 
-    <span style="margin-right: 80px">ObjectId</span>
-   <v-icon color="red"  style="margin-left: 130px">mdi-delete</v-icon> 
-       <v-spacer></v-spacer>
-    <v-card-actions>
-     
-    </v-card-actions>
+      <span style="margin-right: 80px">ObjectId</span>
+      <v-btn style="margin-left: 130px" icon>
+        <v-icon color="red">mdi-delete</v-icon>
+      </v-btn>
 
-
-     <v-icon color="grey" style="margin-right: 130px">mdi-arrow-left-bold</v-icon> 
-   <v-icon color="grey" style="margin-left: 130px">mdi-arrow-right-bold</v-icon> 
-  </v-card>
-    </div>
+      <v-spacer></v-spacer>
+      <v-card-actions> </v-card-actions>
+    
+      <v-btn style="margin-right: 100px" icon>
+        <v-icon color="grey">mdi-arrow-left-bold</v-icon>
+      </v-btn>
+      <v-btn style="margin-left: 120px" icon>
+        <v-icon color="grey">mdi-arrow-right-bold</v-icon>
+      </v-btn>
+    </v-card>
+  </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-      reveal: false,
-    }),
-}
+    reveal: false,
+  }),
+};
 </script>
  

@@ -1,21 +1,15 @@
 <template>
     <div id="top-search-bar">
-          <v-text-field
-            class="mt-5 appBar"
-            label="Search"
-            prepend-inner-icon="mdi-magnify"
-            autocomplete="off"
-            dense
-            v-model="search"
-          ></v-text-field>
+         <SearchBar />
         </div>
 </template>
 
 <script>
+import SearchBar from '../components/SearchBar.vue'
 export default {
   name: 'dashboard',
-  props: {
-    msg: String
-  }
+  components: {
+    SearchBar,
+  },
 }
 </script>

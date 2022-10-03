@@ -1,46 +1,53 @@
 <template>
-  <div>
-    <div>
-      <v-card
-        class="my-3 note-card"
-        id="noteCard"
-        elevation="9"
-        @click="active = true"
-      >
-        <div v-if="active">
-          <v-toolbar flat>
-            <v-text-field
-              class="note-title pt-5"
-              name="note-title"
-              flat
-              solo
-              label="Title"
-              v-model="noteTitle"
-            ></v-text-field>
-            <v-spacer></v-spacer>
-          </v-toolbar>
-          <v-footer flat color="white">
-            <v-spacer></v-spacer>
-            <v-btn id="close-card" text v-on:click="takeNote"> close </v-btn>
-          </v-footer>
-        </div>
-        <div >
-          <v-toolbar flat>
-            <v-spacer></v-spacer>
-          </v-toolbar>
-        </div>
+  <div class="text-center">
+    <v-dialog
+      v-model="dialog"
+      width="500"
+    >
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          color="red lighten-2"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          Add Task
+        </v-btn>
+      </template>
+
+      <v-card>
+        <v-card-title class="text-h5 grey lighten-2">
+          Title
+        </v-card-title>
+        <v-divider></v-divider>
+         <v-text-field
+                  label="Type Title"
+                  required
+                ></v-text-field>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+            Add 
+          </v-btn>
+        </v-card-actions>
       </v-card>
-    </div>
+    </v-dialog>
   </div>
 </template>
 
-<script>
 
-export default {
-  name: "Note",
-  data: () => ({
-    noteTitle: "",
-    active: true,
-  }),
-};
+
+<script>
+  export default {
+     name: "Note",
+    data () {
+      return {
+        dialog: true,
+      }
+    },
+  }
 </script>

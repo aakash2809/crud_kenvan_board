@@ -31,6 +31,7 @@
           <v-btn
             color="primary"
             text
+            @click.prevent="addTask"
           >
             Add 
           </v-btn>
@@ -39,8 +40,6 @@
     </v-dialog>
   </div>
 </template>
-
-
 
 <script>
   export default {
@@ -53,6 +52,10 @@
     methods: {
         openPopup() {
             this.dialog = true
+        },
+
+        addTask() {
+            this.dialog = false;
         }
     }
   }

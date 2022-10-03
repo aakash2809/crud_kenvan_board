@@ -1,8 +1,17 @@
 <template>
-    <div id="top-search-bar">
-         <SearchBar />
+  <v-row>
+    <v-col>
+      <SearchBar />
+    </v-col>
+    <v-spacer></v-spacer>
+     <v-col>
+       <PopUp />
+     </v-col>
+  </v-row>
+    <div>
+         
+        
          <div class="text-center">
-   <PopUp />
    <Note/>
     </div>
           

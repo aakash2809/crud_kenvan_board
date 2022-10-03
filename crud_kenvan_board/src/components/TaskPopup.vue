@@ -4,12 +4,13 @@
       v-model="dialog"
       width="500"
     >
-      <template v-slot:activator="{ on, attrs }">
+      <template v-slot:activator="{ on, attrs }"  >
         <v-btn
           color="red lighten-2"
           dark
           v-bind="attrs"
           v-on="on"
+          class="mt-5 appBar"
           @click.prevent="openPopup"
         >
           Add Task
@@ -49,7 +50,6 @@
         dialog: false,
       }
     },
-
     methods: {
         openPopup() {
             this.dialog = true

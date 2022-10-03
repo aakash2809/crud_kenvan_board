@@ -7,9 +7,9 @@
       <v-btn style="margin-left: 130px" icon>
         <v-icon color="red">mdi-delete</v-icon>
       </v-btn>
-
       <v-spacer></v-spacer>
-      <v-card-actions> </v-card-actions>
+      <span style="align:center">Aakash</span>
+      <v-spacer></v-spacer>
     
       <v-btn style="margin-right: 100px" icon>
         <v-icon color="grey">mdi-arrow-left-bold</v-icon>

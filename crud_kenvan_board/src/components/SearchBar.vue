@@ -17,3 +17,9 @@ export default {
   name: 'SearchBar',
 }
 </script>
+
+<style scoped>
+ .v-text-field{
+      width: 400px;
+}
+</style>
